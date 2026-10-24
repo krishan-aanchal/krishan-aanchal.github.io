@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index,follow">
+    <title>Krishanjeet & Aanchal — A Sacred Union</title>
+    <meta name="description" content="You are cordially invited to celebrate the wedding of Krishanjeet and Aanchal.">
+    <meta property="og:title" content="Krishanjeet & Aanchal — Wedding Invitation">
+    <meta property="og:description" content="You are cordially invited to celebrate the wedding of Krishanjeet and Aanchal.">
+    <meta property="og:image" content="https://www.lovesolutions.in/krishanjeetaanchal/assets/meta-preview-20261008.jpg">
+    <meta property="og:image:secure_url" content="https://www.lovesolutions.in/krishanjeetaanchal/assets/meta-preview-20261008.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="788">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="Krishanjeet and Aanchal wedding monogram">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Krishanjeet & Aanchal — Wedding Invitation">
+    <meta name="twitter:description" content="You are cordially invited to celebrate the wedding of Krishanjeet and Aanchal.">
+    <meta name="twitter:image" content="https://www.lovesolutions.in/krishanjeetaanchal/assets/meta-preview-20261008.jpg">
+
+    <link rel="icon" type="image/png" href="assets/love-solutions-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preload" as="video" href="assets/entry-video.mp4">
+    
+    <script src="assets/js/confetti.browser.min.js"></script>
+
+    <style>
+        /* ============================================================
+           DESIGN SYSTEM — Midnight Lantern Luxury
+        ============================================================ */
+        :root {
+            --cream:        #17101C;
+            --cream-2:      #211725;
+            --terracotta:   #D98A3B;
+            --terra-dark:   #A95622;
+            --terra-light:  #F0AD62;
+            --gold:         #E0A846;
+            --gold-light:   #FFD27C;
+            --gold-pale:    #4A321C;
+            --burgundy:     #2B1424;
+            --text-dark:    #FFF2DE;
+            --text-mid:     #E6C49E;
+            --text-light:   #B99573;
+            --border:       rgba(255,205,128,0.2);
+            --white:        #241927;
+            --shadow-warm:  0 22px 70px -12px rgba(15,8,18,0.58);
+            --shadow-gold:  0 0 34px rgba(224,168,70,0.22);
+        }
+
+        body.light-theme {
+            --cream:        #FFF6EF;
+            --cream-2:      #F8E8DD;
+            --terracotta:   #B85940;
+            --terra-dark:   #8B3E28;
+            --terra-light:  #D4806A;
+            --gold:         #C9963E;
+            --gold-light:   #E8C07A;
+            --gold-pale:    #F1DDB6;
+            --burgundy:     #5C2233;
+            --text-dark:    #2E1810;
+            --text-mid:     #6B4535;
+            --text-light:   #9E7060;
+            --border:       #E8D2C4;
+            --white:        #FFFDF8;
+            --shadow-warm:  0 20px 60px -10px rgba(92,34,51,0.12);
+            --shadow-gold:  0 4px 24px rgba(201,150,62,0.18);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background:
+                radial-gradient(circle at 50% 0%, rgba(224,168,70,0.12), transparent 36rem),
+                linear-gradient(180deg, #1B1221 0%, var(--cream) 44%, #251528 100%);
+            color: var(--text-dark);
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            overflow-x: hidden;
+        }
+        body.light-theme {
+            background: var(--cream);
+        }
+
+        /* ============================================================
+           TYPOGRAPHY & UTILITIES
+        ============================================================ */
+        .shimmer-gold {
+            background: linear-gradient(105deg, var(--terra-dark) 20%, var(--gold) 40%, var(--gold-light) 50%, var(--gold) 60%, var(--terra-dark) 80%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+        @keyframes shimmer { to { background-position: 200% center; } }
+
+        .text-center { text-align: center; }
+        .mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mb-4{margin-bottom:1rem}
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .spin { animation: spin 1s linear infinite; }
+        @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+        .fade-in { animation: fadeIn 0.8s ease both; }
+
+        /* ============================================================
+           FLOATING OVERLAYS
+        ============================================================ */
+        #lanterns-canvas,
+        #petals-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 1; opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        #lanterns-canvas {
+            mix-blend-mode: screen;
+        }
+        #lanterns-canvas.active { opacity: 0.88; }
+        body.light-theme #lanterns-canvas { opacity: 0; }
+        #petals-canvas.active { opacity: 0; }
+        body.light-theme #petals-canvas.active { opacity: 1; }
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        .reveal {
+            opacity: 0; transform: translateY(25px);
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.35s; }
+
+        /* ============================================================
+           ENTRY VIDEO GATE
+        ============================================================ */
+        #entry-gate {
+            position: fixed; inset: 0; background: #0a0505; z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: opacity 0.8s ease; user-select: none;
+            -webkit-user-select: none;
+        }
+        #entry-gate video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        #play-overlay {
+            position: absolute; inset: 0; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; z-index: 2;
+            background: rgba(10,5,5,0.35); transition: opacity 0.4s ease;
+        }
+        #play-overlay.hidden, #entry-gate.fade-out { opacity: 0; pointer-events: none; }
+
+        /* ============================================================
+           AUDIO TOGGLE
+        ============================================================ */
+        #audio-btn {
+            position: fixed; bottom: 1.5rem; right: 1.5rem; width: 52px; height: 52px;
+            border-radius: 50%; background: var(--terracotta); border: 2px solid rgba(255,255,255,0.25);
+            color: white; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 900; box-shadow: 0 4px 20px rgba(184,89,64,0.4);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        #audio-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(184,89,64,0.5); }
+        #audio-btn svg { width: 22px; height: 22px; }
+
+        #theme-btn {
+            position: fixed; bottom: 5.5rem; right: 1.5rem; width: 52px; height: 52px;
+            border-radius: 50%; background: rgba(26,17,24,0.9); border: 2px solid rgba(255,210,124,0.35);
+            color: var(--gold-light); display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 900; box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+        body.light-theme #theme-btn {
+            background: var(--white);
+            color: var(--terracotta);
+            border-color: rgba(184,89,64,0.22);
+            box-shadow: 0 4px 20px rgba(184,89,64,0.22);
+        }
+        #theme-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(224,168,70,0.35); }
+        body.light-theme #theme-btn:hover { box-shadow: 0 6px 24px rgba(184,89,64,0.28); }
+        #theme-btn svg { width: 22px; height: 22px; }
+
+        /* ============================================================
+           ORNAMENTAL DIVIDER & SECTION LABEL
+        ============================================================ */
+        .ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 0 auto; }
+        .ornament-line { height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold)); }
+        .ornament-line.rev { background: linear-gradient(to left, transparent, var(--gold)); }
+        .ornament svg { color: var(--gold); flex-shrink: 0; }
+
+        .section-label {
+            font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.75rem;
+            letter-spacing: 0.35em; text-transform: uppercase;
+            color: var(--gold); display: block; margin-bottom: 0.75rem;
+        }
+        .section-heading { font-family: 'Great Vibes', cursive; font-size: clamp(3.5rem, 10vw, 5.5rem); line-height: 1.1; }
+
+        /* ============================================================
+           MAIN CONTENT & HERO
+        ============================================================ */
+        #main-content { display: none; }
+        #main-content.visible { display: block; }
+
+        #hero {
+            position: relative; min-height: 100vh; min-height: 100dvh; display: flex; align-items: center;
+            justify-content: center; overflow: hidden;
+            background:
+                radial-gradient(circle at 50% 18%, rgba(217,138,59,0.2), transparent 24rem),
+                linear-gradient(180deg, #1A1120 0%, var(--cream-2) 100%);
+            padding: 3rem 1rem;
+        }
+        body.light-theme #hero { background: var(--cream-2); }
+        #hero-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0.12; z-index: 0; filter: brightness(0.62) saturate(0.9); }
+        body.light-theme #hero-bg-video { opacity: 0.22; filter: none; }
+        
+        .hero-frame { position: absolute; inset: 1.25rem; pointer-events: none; z-index: 2; }
+        .hero-frame::before, .hero-frame::after, .hero-frame span::before, .hero-frame span::after {
+            content: ''; position: absolute; width: 60px; height: 60px; border-color: var(--gold); border-style: solid; opacity: 0.5;
+        }
+        .hero-frame::before { top:0; left:0; border-width: 1px 0 0 1px; }
+        .hero-frame::after  { top:0; right:0; border-width: 1px 1px 0 0; }
+        .hero-frame span::before { bottom:0; left:0; border-width: 0 0 1px 1px; }
+        .hero-frame span::after  { bottom:0; right:0; border-width: 0 1px 1px 0; }
+
+        .hero-card {
+            position: relative; z-index: 3; max-width: 540px; width: 100%;
+            background: rgba(33,23,37,0.86); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,205,128,0.2); border-radius: 2rem;
+            padding: clamp(2.5rem, 6vw, 3.5rem) clamp(1.5rem, 5vw, 3rem);
+            box-shadow: var(--shadow-warm), 0 0 40px rgba(224,168,70,0.12), 0 0 0 1px rgba(255,224,170,0.08) inset;
+            text-align: center; animation: heroCardIn 1.6s ease-out both; animation-delay: 0.2s;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        body:not(.light-theme) .hero-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: radial-gradient(circle at 50% 0%, rgba(255,196,100,0.2), transparent 42%);
+            pointer-events: none;
+            z-index: -1;
+            filter: blur(14px);
+        }
+        body.light-theme .hero-card {
+            background: rgba(248,232,221,0.86);
+            border-color: rgba(201,150,62,0.2);
+            box-shadow: var(--shadow-warm), 0 0 0 1px rgba(255,253,248,0.64) inset;
+        }
+        @keyframes heroCardIn { from { opacity:0; transform: scale(0.96) translateY(20px); } to { opacity:1; transform: scale(1) translateY(0); } }
+
+        .ganesh-icon { height: 60px; width: auto; object-fit: contain; margin: 0 auto 0.75rem; animation: floatIcon 4s ease-in-out infinite; }
+        @keyframes floatIcon { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+        .blessings-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: var(--text-mid); line-height: 1.5; margin-bottom: 1.75rem; padding: 0 1rem; }
+        .couple-block { width: 100%; margin-bottom: 0.5rem; }
+        .couple-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(3.2rem, 10vw, 5.2rem); line-height: 1.1; display: block; letter-spacing: 0.01em; padding: 0.2rem 0; font-weight: 500; }
+        .family-line { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-weight: 500; color: var(--text-dark); line-height: 1.4; margin-top: 0.5rem; }
+
+        .ampersand-wrap { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1.5rem 0; width: 100%; }
+        .ampersand-line { height: 1px; width: 40px; background: var(--border); }
+        .ampersand { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: var(--gold); line-height: 1; }
+
+        .card-corner { position: absolute; width: 32px; height: 32px; border-color: rgba(201,150,62,0.35); border-style: solid; }
+        .card-corner.tl { top:16px; left:16px; border-width: 1px 0 0 1px; border-radius: 4px 0 0 0; }
+        .card-corner.tr { top:16px; right:16px; border-width: 1px 1px 0 0; border-radius: 0 4px 0 0; }
+        .card-corner.bl { bottom:16px; left:16px; border-width: 0 0 1px 1px; border-radius: 0 0 0 4px; }
+        .card-corner.br { bottom:16px; right:16px; border-width: 0 1px 1px 0; border-radius: 0 0 4px 0; }
+
+        .scroll-cue { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; opacity: 0.7; animation: scrollBounce 2s ease infinite; }
+        .scroll-cue p { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-mid); }
+        .scroll-cue svg { color: var(--text-mid); width: 18px; }
+        @keyframes scrollBounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+
+        /* ============================================================
+           3 HEARTS SCRATCH TO REVEAL SECTION
+        ============================================================ */
+        #scratch-reveal-section { background: var(--cream); padding: 5rem 1.5rem; text-align: center; }
+        #Reception-section { background: var(--cream); padding: 5rem 1.5rem; text-align: center; }
+
+        
+        .hearts-row {
+            display: flex; justify-content: center; align-items: center; gap: 15px;
+            flex-wrap: nowrap; width: 100%; max-width: 440px; margin: 2rem auto 0;
+        }
+
+        .heart-container {
+            position: relative; width: 30vw; max-width: 120px; aspect-ratio: 1.1 / 1;
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 185' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 185 C100 185, 200 125, 200 70 C200 23, 157 -10, 121.5 15 C100 31, 100 31, 100 31 C100 31, 100 31, 78.5 15 C43 -10, 0 23, 0 70 C0 125, 100 185, 100 185 Z' fill='black'/%3E%3C/svg%3E");
+            mask-size: contain; mask-repeat: no-repeat; mask-position: center;
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 185' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M100 185 C100 185, 200 125, 200 70 C200 23, 157 -10, 121.5 15 C100 31, 100 31, 100 31 C100 31, 100 31, 78.5 15 C43 -10, 0 23, 0 70 C0 125, 100 185, 100 185 Z' fill='black'/%3E%3C/svg%3E");
+            -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;
+            
+            background: var(--cream-2);
+            cursor: crosshair; touch-action: none; transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .hearts-row.unlocked .heart-container {
+            animation: gentle-heart-beat 3s infinite ease-in-out;
+            background: var(--white);
+            box-shadow: 0 0 20px rgba(184,89,64,0.15);
+        }
+        .hearts-row.unlocked .heart-container:nth-child(2) { animation-delay: 0.3s; }
+        .hearts-row.unlocked .heart-container:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes gentle-heart-beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hidden-content {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: transparent; z-index: 1;
+        }
+        .hidden-content .label {
+            font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.65rem;
+            letter-spacing: 0.15em; color: var(--text-light); text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .hidden-content .value {
+            font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600;
+            color: var(--gold-light); line-height: 1; text-shadow: 0 0 18px rgba(224,168,70,0.28);
+        }
+        body.light-theme .hidden-content .value {
+            color: var(--terracotta);
+            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
+        }
+        
+        .scratch-canvas {
+            position: absolute; top: 0; left: 0; z-index: 2; width: 100%; height: 100%;
+            transition: opacity 1s ease;
+        }
+
+        .surprise-message {
+            font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--terracotta);
+            margin-top: 2rem; opacity: 0; transform: translateY(15px);
+            transition: all 1.2s ease;
+        }
+        .surprise-message.revealed { opacity: 1; transform: translateY(0); }
+
+        /* --- Countdown Timer (Revealed after scratch) --- */
+        .countdown-container {
+            display: flex; justify-content: center; gap: 0.8rem; margin-top: 1.5rem;
+            opacity: 0; transform: translateY(15px); transition: all 1.2s ease;
+            pointer-events: none; flex-wrap: wrap;
+        }
+        body.light-theme .cd-item {
+            background: var(--white);
+        }
+        .countdown-container.revealed {
+            opacity: 1; transform: translateY(0); pointer-events: auto;
+        }
+        .cd-item {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: rgba(36,25,39,0.92); border: 1px solid var(--border); border-radius: 0.75rem;
+            padding: 0.8rem 1rem; min-width: 70px; box-shadow: var(--shadow-warm);
+        }
+        .cd-item span {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600;
+            color: var(--terracotta); line-height: 1;
+        }
+        .cd-item small {
+            font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.65rem; letter-spacing: 0.15em;
+            color: var(--text-light); text-transform: uppercase; margin-top: 0.3rem;
+        }
+
+        /* ============================================================
+           PHOTO / VIDEO SECTION
+        ============================================================ */
+        #memories-section { padding: 5rem 1.5rem; background: var(--cream-2); }
+        .memories-frame { max-width: 420px; margin: 3rem auto 0; position: relative; }
+        .memories-frame::before { content: ''; position: absolute; inset: -12px; border: 1px solid rgba(201,150,62,0.35); border-radius: 2rem; transform: rotate(2deg); }
+        .memories-frame::after { content: ''; position: absolute; inset: -6px; border: 1px solid rgba(201,150,62,0.2); border-radius: 1.8rem; transform: rotate(-1deg); }
+        .memories-inner { position: relative; z-index: 1; border-radius: 1.5rem; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-warm); background: var(--cream); aspect-ratio: 1080/1600; }
+        .memories-slider { position: relative; width: 100%; height: 100%; }
+        .memory-slide { position: absolute; inset: 0; opacity: 0; z-index: 0; transition: opacity 1.35s ease; will-change: opacity; }
+        .memory-slide.is-active { opacity: 1; z-index: 2; }
+        .memory-slide img { width: 100%; height: 100%; display: block; object-fit: cover; }
+        .memory-slide:first-child:last-child { opacity: 1; animation: none; }
+        .memory-empty { height: 100%; display: grid; place-items: center; padding: 2rem; text-align: center; color: var(--text-light); font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-style: italic; background: rgba(255,255,255,0.45); }
+
+        /* ============================================================
+           EVENTS
+        ============================================================ */
+        #events-section { padding: 5rem 1.5rem; background: var(--cream); }
+        .event-block { max-width: 420px; margin: 0 auto 4rem; }
+        .event-title { display: none; font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--terracotta); margin-bottom: 0.15rem; }
+        .event-subtitle { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.1rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-light); margin-bottom: 1.25rem; }
+
+        .event-media-wrap {
+            border-radius: 1.5rem; overflow: hidden; border: 1px solid var(--border);
+            box-shadow: var(--shadow-warm); position: relative;
+            background: var(--cream-2);
+            min-height: 220px;
+        }
+        body:not(.light-theme) .event-media-wrap {
+            box-shadow: var(--shadow-warm), 0 0 26px rgba(224,168,70,0.12);
+        }
+        /* Warm shimmer skeleton while image loads */
+        .event-media-wrap::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(110deg, var(--cream-2) 30%, rgba(224,168,70,0.18) 50%, var(--cream-2) 70%);
+            background-size: 200% 100%;
+            animation: skeletonShimmer 1.6s ease-in-out infinite;
+            z-index: 0;
+            border-radius: inherit;
+        }
+        @keyframes skeletonShimmer {
+            0%   { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+        .event-media-wrap img {
+            width: 100%; height: auto; display: block;
+            position: relative; z-index: 1;
+        }
+
+        .event-venue-card {
+            max-width: 420px; margin: 1.25rem auto 0; background: rgba(36,25,39,0.92);
+            border-radius: 1rem; border: 1px solid var(--border); overflow: hidden;
+            box-shadow: 0 4px 16px rgba(92,34,51,0.06); padding: 1.5rem; text-align: center;
+            display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
+        }
+        body.light-theme .event-venue-card {
+            background: var(--white);
+            box-shadow: 0 4px 16px rgba(92,34,51,0.06);
+        }
+        .event-venue-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; color: var(--text-mid); }
+        .event-dir-btn {
+            display: inline-block; background: var(--terracotta); color: white; text-decoration: none;
+            padding: 0.8rem 1.8rem; border-radius: 9999px; font-family: 'Cormorant Garamond', serif; font-weight: 600;
+            font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase;
+            white-space: nowrap; transition: background 0.2s ease;
+        }
+        .event-dir-btn:hover { background: var(--terra-dark); }
+
+        .event-sep { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 2rem auto; max-width: 200px; opacity: 0.5; }
+        .event-sep-line { height: 1px; flex: 1; background: var(--gold); }
+        .event-sep-dot  { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+        /* ============================================================
+           WARDROBE PLANNER
+        ============================================================ */
+        #wardrobe-section { padding: 5rem 1.5rem; background: var(--cream-2); }
+        .wardrobe-frame {
+            max-width: 720px;
+            margin: 3rem auto 0;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid rgba(201,150,62,0.35);
+            background: rgba(36,25,39,0.92);
+            box-shadow: var(--shadow-warm);
+        }
+        body:not(.light-theme) .wardrobe-frame {
+            box-shadow: var(--shadow-warm), 0 0 34px rgba(224,168,70,0.14);
+        }
+        body.light-theme .wardrobe-frame { background: var(--white); }
+        .wardrobe-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ============================================================
+           RSVP SECTION
+        ============================================================ */
+        #rsvp-section { padding: 5rem 1.5rem; background: var(--cream-2); }
+        .rsvp-form { max-width: 520px; margin: 0 auto; }
+        .form-card { background: rgba(36,25,39,0.92); border: 1px solid var(--border); border-radius: 1.5rem; padding: 2rem; margin-bottom: 1.25rem; box-shadow: 0 18px 48px rgba(15,8,18,0.28); transition: opacity 0.3s ease; }
+        body.light-theme .form-card {
+            background: var(--white);
+            box-shadow: 0 4px 24px rgba(92,34,51,0.05);
+        }
+        .form-card-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; font-weight: 600; color: var(--terracotta); margin-bottom: 0.35rem; }
+        .form-card-subtitle { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.25rem; }
+        .field-label { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); display: block; margin-bottom: 0.4rem; }
+        
+        .field-input { width: 100%; background: rgba(23,16,28,0.72); border: 0; border-bottom: 1.5px solid var(--border); padding: 0.6rem 0.25rem; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--text-dark); outline: none; transition: border-color 0.2s ease; }
+        body.light-theme .field-input { background: var(--cream); }
+        .field-input:focus { border-color: var(--terracotta); }
+        .field-select {
+            appearance: none; -webkit-appearance: none;
+            background-image: linear-gradient(45deg, transparent 50%, var(--terracotta) 50%), linear-gradient(135deg, var(--terracotta) 50%, transparent 50%);
+            background-position: calc(100% - 18px) 55%, calc(100% - 12px) 55%;
+            background-size: 6px 6px, 6px 6px;
+            background-repeat: no-repeat;
+            padding-right: 2.25rem;
+            cursor: pointer;
+        }
+        
+        .field-group { margin-bottom: 1.25rem; }
+        
+        .checkbox-pill { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.25rem; border: 1.5px solid var(--border); border-radius: 0.75rem; cursor: pointer; transition: all 0.25s ease; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--text-mid); text-align: left; }
+        .checkbox-pill { position: relative; }
+        /* visually hidden but focusable, so the browser's "please select" prompt can show */
+        .checkbox-pill input { position: absolute; left: 50%; bottom: 0; opacity: 0; pointer-events: none; }
+        .checkbox-pill:has(input:checked) { background: var(--terracotta); border-color: var(--terracotta); color: white; }
+        .checkbox-pill:has(input:checked) small { color: rgba(255,255,255,0.85); }
+        .checkbox-row { display: flex; flex-direction: column; gap: 0.6rem; }
+
+        .circle-select { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; max-width: 360px; margin: 0 auto; }
+        .circle-opt { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; min-width: 0; cursor: pointer; }
+        .circle-opt input { display: none; }
+        .circle-face { width: 60px; height: 60px; border-radius: 50%; border: 1.5px solid var(--border); background: rgba(23,16,28,0.72); display: flex; align-items: center; justify-content: center; font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: var(--terracotta); transition: all 0.25s ease; }
+        body.light-theme .circle-face { background: var(--cream); }
+        .circle-opt:has(input:checked) .circle-face { background: var(--terracotta); border-color: var(--terracotta); color: white; box-shadow: 0 4px 16px rgba(184,89,64,0.35); }
+        .circle-opt-label { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); }
+
+        .text-area { width: 100%; background: rgba(23,16,28,0.72); border: 1px solid var(--border); border-radius: 0.75rem; padding: 0.85rem 1rem; font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--text-dark); outline: none; resize: none; transition: border-color 0.2s ease; line-height: 1.5; }
+        body.light-theme .text-area { background: var(--cream); }
+        .text-area:focus { border-color: var(--terracotta); }
+
+        .submit-btn { width: 100%; background: var(--terracotta); color: white; border: none; border-radius: 9999px; padding: 1.1rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(184,89,64,0.35); position: relative; overflow: hidden; }
+        .submit-btn::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent); transform: translateX(-100%); transition: transform 0.5s ease; }
+        .submit-btn:hover::after { transform: translateX(100%); }
+        .submit-btn:hover { background: var(--terra-dark); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(184,89,64,0.45); }
+        .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+        /* ============================================================
+           FOOTER & MODAL
+        ============================================================ */
+        #footer-section { 
+            background: var(--burgundy); 
+            padding: 4rem 1.5rem; 
+            color: white; 
+            text-align: center; 
+            min-height: 100vh; min-height: 100dvh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .footer-couple-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: clamp(4rem, 14vw, 7rem); color: var(--gold-light); display: block; line-height: 1.1; }
+        .footer-date { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(1.5rem, 5vw, 1.8rem); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-top: 1.5rem; }
+        #rsvp-modal { position: fixed; inset: 0; background: rgba(30,10,5,0.65); backdrop-filter: blur(10px); z-index: 9000; display: none; align-items: center; justify-content: center; padding: 1.5rem; }
+        #rsvp-modal.open { display: flex; }
+        .modal-card { background: var(--white); border: 1px solid var(--border); border-radius: 1.5rem; max-width: 360px; width: 100%; padding: 2.5rem 2rem 2rem; text-align: center; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.45); animation: modalIn 0.4s cubic-bezier(0.16,1,0.3,1) both; }
+        body.light-theme .modal-card {
+            border-color: transparent;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+        }
+        @keyframes modalIn { from { opacity:0; transform: scale(0.9) translateY(20px); } to { opacity:1; transform: scale(1) translateY(0); } }
+        .modal-icon-ring { width: 72px; height: 72px; border-radius: 50%; background: rgba(184,89,64,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+        .modal-icon-ring svg { width: 32px; color: var(--terracotta); }
+        .modal-title { font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--terracotta); margin-bottom: 0.5rem; }
+        .modal-msg { font-style: italic; font-family: 'Cormorant Garamond', serif; color: var(--text-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.75rem; }
+        .modal-close-btn { background: var(--terracotta); color: white; border: none; border-radius: 9999px; padding: 0.85rem 2.5rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease; width: 100%; }
+        .modal-close-btn:hover { background: var(--terra-dark); }
+        .footer-brand-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            opacity: 0.86;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .footer-brand-link:hover { opacity: 1; transform: translateY(-2px); }
+        .footer-brand-logo {
+            display: block;
+            width: min(220px, 60vw);
+            height: auto;
+            filter: drop-shadow(0 8px 22px rgba(0,0,0,0.28));
+        }
+        
+    </style>
+</head>
+<body class="light-theme">
+
+<canvas id="lanterns-canvas"></canvas>
+<canvas id="petals-canvas"></canvas>
+
+<audio id="bg-audio" loop preload="none">
+    <source src="assets/mohabbatein-love-theme.mp3" type="audio/mpeg">
+</audio>
+
+<button id="theme-btn" title="Switch to dark theme" aria-label="Switch to dark theme" aria-pressed="true">
+    <svg id="theme-icon-moon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" style="display:none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A8.5 8.5 0 1111.2 3a6.6 6.6 0 009.8 9.8z"/>
+    </svg>
+    <svg id="theme-icon-sun" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4"/>
+        <path stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/>
+    </svg>
+</button>
+
+<button id="audio-btn" title="Toggle music" aria-label="Toggle background music">
+    <svg id="icon-on" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
+    </svg>
+    <svg id="icon-off" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" style="display:none">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/>
+    </svg>
+</button>
+
+<div id="entry-gate">
+    <video id="entry-video" playsinline webkit-playsinline muted preload="auto" disablePictureInPicture>
+        <source src="assets/entry-video.mp4#t=0.001" type="video/mp4">
+    </video>
+    <div id="play-overlay">
+    </div>
+</div>
+
+<div id="main-content">
+
+    <section id="hero">
+        <video id="hero-bg-video" autoplay loop muted playsinline>
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-frame"><span></span></div>
+
+        <div class="hero-card">
+            <div class="card-corner tl"></div>
+            <div class="card-corner tr"></div>
+            <div class="card-corner bl"></div>
+            <div class="card-corner br"></div>
+
+            <img class="ganesh-icon" src="assets/vinayak.png" alt="Shri Vinayak" loading="eager">
+            
+            <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:0.75rem;letter-spacing:0.3em;color:var(--terracotta);text-transform:uppercase;margin-bottom:1.25rem;">We became one..<br>They said done..<br>Come. Join the Fun...</p>
+
+            <p class="blessings-text">
+                With the blessings of the Almighty & our respected elders,<br>
+                we joyfully request your gracious presence for the wedding celebration of
+            </p>
+
+            <div class="couple-block">
+                <span class="couple-name shimmer-gold">Krishanjeet</span>
+                <p class="family-line">S/o Smt. Namita Rani Sahu &amp; Sri Krishna Kumar Sahu</p>
+            </div>
+
+            <div class="ampersand-wrap">
+                <div class="ampersand-line"></div>
+                <span class="ampersand">&</span>
+                <div class="ampersand-line"></div>
+            </div>
+
+            <div class="couple-block">
+                <span class="couple-name shimmer-gold">Aanchal</span>
+                <p class="family-line">D/o Smt. Kusum Lata &amp; Sri. Narender Singh</p>
+            </div>
+        </div>
+
+        <div class="scroll-cue">
+            <p>Scroll</p>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+    </section>
+
+    <section id="scratch-reveal-section">
+        <div class="text-center reveal">
+            <span class="section-label">Save The Date</span>
+            <h2 class="section-heading" style="color:var(--terracotta)">Reveal Our<br>Big Day</h2>
+            <p class="reveal reveal-delay-2 mt-4" style="font-style:italic;color:var(--text-light);font-size:1.1rem;margin-bottom:1rem;">Scratch the hearts to reveal</p>
+        </div>
+
+        <div class="hearts-row reveal reveal-delay-2" id="heartsRow">
+            <div class="heart-container" id="heartContainer1">
+                <div class="hidden-content">
+                    <span class="label">DAY</span>
+                    <span class="value">30</span>
+                </div>
+                <canvas id="scratchCanvas1" class="scratch-canvas"></canvas>
+            </div>
+
+            <div class="heart-container" id="heartContainer2">
+                <div class="hidden-content">
+                    <span class="label">MONTH</span>
+                    <span class="value">Nov</span>
+                </div>
+                <canvas id="scratchCanvas2" class="scratch-canvas"></canvas>
+            </div>
+
+            <div class="heart-container" id="heartContainer3">
+                <div class="hidden-content">
+                    <span class="label">YEAR</span>
+                    <span class="value">2026</span>
+                </div>
+                <canvas id="scratchCanvas3" class="scratch-canvas"></canvas>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <div id="surpriseMessage" class="surprise-message">
+                The start of a beautiful journey...
+            </div>
+            
+            <div id="countdown-container" class="countdown-container">
+                <div class="cd-item"><span id="cd-days">00</span><small>Days</small></div>
+                <div class="cd-item"><span id="cd-hours">00</span><small>Hrs</small></div>
+                <div class="cd-item"><span id="cd-mins">00</span><small>Mins</small></div>
+                <div class="cd-item"><span id="cd-secs">00</span><small>Secs</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Reception-section">
+        <div class="text-center reveal">
+            <!-- <span class="section-label">Save The Date</span> -->
+            <h4 class="section-heading" style="color:var(--terracotta)">You are cordially invited<br>to our Reception</h4>
+            <!-- <p class="reveal reveal-delay-2 mt-4" style="font-style:italic;color:var(--text-light);font-size:1.1rem;margin-bottom:1rem;">Scratch the hearts to reveal</p> -->
+        </div>
+
+        <div class="hearts-row reveal reveal-delay-2" id="heartsRow">
+            <div class="heart-container" id="heartContainer1">
+                <div class="hidden-content">
+                    <span class="label">DAY</span>
+                    <span class="value">08</span>
+                </div>
+                <!-- <canvas id="scratchCanvas1" class="scratch-canvas"></canvas> -->
+            </div>
+
+            <div class="heart-container" id="heartContainer2">
+                <div class="hidden-content">
+                    <span class="label">MONTH</span>
+                    <span class="value">Dec</span>
+                </div>
+                <!-- <canvas id="scratchCanvas2" class="scratch-canvas"></canvas> -->
+            </div>
+
+            <div class="heart-container" id="heartContainer3">
+                <div class="hidden-content">
+                    <span class="label">YEAR</span>
+                    <span class="value">2026</span>
+                </div>
+                <!-- <canvas id="scratchCanvas3" class="scratch-canvas"></canvas> -->
+            </div>
+        </div>
+        
+        <!-- <div class="text-center">
+            <div id="surpriseMessage" class="surprise-message">
+                The start of a beautiful journey...
+            </div>
+            
+            <div id="countdown-container" class="countdown-container">
+                <div class="cd-item"><span id="cd-days">00</span><small>Days</small></div>
+                <div class="cd-item"><span id="cd-hours">00</span><small>Hrs</small></div>
+                <div class="cd-item"><span id="cd-mins">00</span><small>Mins</small></div>
+                <div class="cd-item"><span id="cd-secs">00</span><small>Secs</small></div>
+            </div>
+        </div> -->
+    </section>
+
+    <section id="memories-section">
+        <div class="text-center reveal">
+            <span class="section-label">A Glimpse of Us</span>
+            <h2 class="section-heading" style="color:var(--terracotta)">Our Beautiful<br>Moments</h2>
+            <div class="ornament mt-4">
+                <div class="ornament-line rev"></div>
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+                <div class="ornament-line"></div>
+            </div>
+        </div>
+
+        <div class="memories-frame reveal reveal-delay-2">
+            <div class="memories-inner">
+                <div class="memories-slider" id="memories-slider" aria-label="Our beautiful memories">
+                    <figure class="memory-slide is-active">
+                        <img src="assets/memories/krishanjeet-aanchal-01.jpg" alt="Krishanjeet and Aanchal together in festive attire" loading="eager">
+                    </figure>
+                    <figure class="memory-slide">
+                        <img src="assets/memories/krishanjeet-aanchal-04.jpg" alt="Krishanjeet and Aanchal dancing together" loading="eager">
+                    </figure>
+                    <figure class="memory-slide">
+                        <img src="assets/memories/krishanjeet-aanchal-03.jpg" alt="Krishanjeet and Aanchal at graduation" loading="eager">
+                    </figure>
+                    <figure class="memory-slide">
+                        <img src="assets/memories/krishanjeet-aanchal-05.jpg" alt="Krishanjeet and Aanchal at a restaurant" loading="eager">
+                    </figure>
+                    <figure class="memory-slide">
+                        <img src="assets/memories/krishanjeet-aanchal-02.jpg" alt="Krishanjeet and Aanchal smiling together" loading="eager">
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+       
+    </section>
+
+    <section id="events-section">
+        <div class="text-center reveal" style="margin-bottom:3rem;">
+            <span class="section-label">The Celebration Unfolds</span>
+            <h2 class="section-heading" style="color:var(--terracotta)">Sacred<br>Ceremonies</h2>
+            <div class="ornament mt-4">
+                <div class="ornament-line rev"></div>
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="color:var(--gold)"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+                <div class="ornament-line"></div>
+            </div>
+        </div>
+
+
+        <div class="event-block reveal">
+            <div class="text-center mb-4">
+                <p class="event-subtitle">Monday, 30 Nov 2026 | 10:00 AM onwards</p>
+                <h3 class="event-title">Wedding</h3>
+            </div>
+            <div class="event-media-wrap">
+                <img src="assets/wedding-30-nov-2026.jpeg" alt="Wedding invitation: Monday, 30 November 2026. Barat at 10:00 AM, Jai Mala at 11:30 AM, Phera at 1:00 PM" loading="eager">
+            </div>
+            <div class="event-venue-card reveal reveal-delay-1">
+                <span class="event-venue-name">Jim Corbett National Park</span>
+            </div>
+        </div>
+        <div class="event-sep reveal"><div class="event-sep-line"></div><div class="event-sep-dot"></div><div class="event-sep-line"></div></div>
+
+        <div class="event-block reveal">
+            <div class="text-center mb-4">
+                <p class="event-subtitle">Tuesday, 8 Dec 2026 | 7:00 PM onwards</p>
+                <h3 class="event-title">Reception</h3>
+            </div>
+            <div class="event-media-wrap">
+                <img src="assets/reception-8-dec-2026.jpeg" alt="Reception invitation: Tuesday, 8 December 2026 from 7:00 PM onwards" loading="eager">
+            </div>
+            <div class="event-venue-card reveal reveal-delay-1">
+                <span class="event-venue-name">Venue: S3 Lawn Berhampur</span>
+                <a class="event-dir-btn" href="https://share.google/xwLNERZeg82sryGQi" target="_blank" rel="noopener noreferrer">View on Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="wardrobe-section">
+        <div class="text-center reveal">
+            <span class="section-label">Dress The Part</span>
+            <h2 class="section-heading" style="color:var(--terracotta)">Wardrobe<br>Planner</h2>
+            <p class="reveal reveal-delay-2 mt-4" style="font-style:italic;color:var(--text-light);font-size:1.1rem;margin-bottom:1rem;">A style guide for every celebration</p>
+        </div>
+
+        <div class="wardrobe-frame reveal reveal-delay-2">
+            <img src="assets/wardrobe-planner-peppy-colorful.png" alt="Wardrobe planner style guide for Haldi, Sangeet, Wedding, and Reception. Haldi: Peppy and Colorful" loading="lazy">
+        </div>
+    </section>
+
+    <section id="rsvp-section">
+        <div class="text-center reveal">
+            <span class="section-label">Join the Celebration</span>
+            <h2 class="section-heading" style="color:var(--terracotta)">Celebrate<br>With Us</h2>
+            <p class="reveal reveal-delay-2 mt-4" style="font-style:italic;color:var(--text-light);font-size:1.1rem;margin-bottom:2.5rem;">A few fun questions before the big day!</p>
+        </div>
+
+        <form id="rsvp-form" class="rsvp-form">
+            <div class="form-card reveal">
+                <p class="form-card-title">Guest Details</p>
+                <div class="field-group">
+                    <label class="field-label" for="f-name">Your Name</label>
+                    <input class="field-input" type="text" id="f-name" name="guestName" required placeholder="Full name" autocomplete="name">
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                    <label class="field-label" for="f-phone">Mobile Number</label>
+                    <input class="field-input" type="tel" id="f-phone" name="mobileNumber" required placeholder="Mobile number" autocomplete="tel">
+                </div>
+            </div>
+
+            <div class="form-card reveal reveal-delay-1" id="events-card">
+                <p class="form-card-title">Are You Attending the Reception?</p>
+                <div class="field-group">
+                    <div class="checkbox-row">
+                        <label class="checkbox-pill">
+                            <span>Yes, I'll be there</span>
+                            <input type="radio" name="attendingReception" value="Yes" required>
+                        </label>
+                        <label class="checkbox-pill">
+                            <span>No, I can't make it</span>
+                            <input type="radio" name="attendingReception" value="No">
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card reveal reveal-delay-1" id="extra-cards">
+                <p class="form-card-title">Make a Guess</p>
+                <p class="form-card-subtitle">Who will get emotional first?</p>
+                <div class="circle-select">
+                    <label class="circle-opt">
+                        <input type="radio" name="guessEmotionalFirst" value="Krishanjeet">
+                        <div class="circle-face">K</div>
+                        <span class="circle-opt-label">Krishanjeet</span>
+                    </label>
+                    <label class="circle-opt">
+                        <input type="radio" name="guessEmotionalFirst" value="Aanchal">
+                        <div class="circle-face">A</div>
+                        <span class="circle-opt-label">Aanchal</span>
+                    </label>
+                    <label class="circle-opt">
+                        <input type="radio" name="guessEmotionalFirst" value="Both">
+                        <div class="circle-face">B</div>
+                        <span class="circle-opt-label">Both</span>
+                    </label>
+                    <label class="circle-opt">
+                        <input type="radio" name="guessEmotionalFirst" value="None">
+                        <div class="circle-face">N</div>
+                        <span class="circle-opt-label">None</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-card reveal reveal-delay-2">
+                <p class="form-card-title">Leave Us a Note</p>
+                <p class="form-card-subtitle">Share a wish or memory.</p>
+                <textarea class="text-area" name="message" rows="3" placeholder="Write something from the heart..."></textarea>
+            </div>
+
+            <div class="reveal reveal-delay-3" style="margin-top:2rem;">
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span id="btn-text">Send Love</span>
+                    <svg id="btn-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;vertical-align:middle;margin-left:8px;" class="spin">
+                        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0110 10" stroke-opacity="0.75"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section id="footer-section">
+        <div class="reveal" style="width: 100%;">
+            <span class="footer-couple-name">
+                Krishanjeet<br>
+                <span style="font-size: clamp(3rem, 10vw, 5rem); color: var(--gold); display: block; margin: 0.2rem 0;">&</span>
+                Aanchal
+            </span>
+            <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2rem;opacity:0.4;">
+                <div style="height:1px;width:60px;background:var(--gold-light);"></div>
+                <span style="color:var(--gold-light);font-size:1.1rem;">♥</span>
+                <div style="height:1px;width:60px;background:var(--gold-light);"></div>
+            </div>
+            <p style="font-style:italic;color:rgba(255,255,255,0.75);font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.9;margin-top:2rem;padding:0 1.5rem;">
+                Two families, one love story.<br>Thank you for being part of ours.
+            </p>
+            <p class="footer-date">
+                November 30, 2026
+            </p>
+            <p style="font-style:italic;color:rgba(255,255,255,0.5);font-family:'Cormorant Garamond',serif;font-size:0.95rem;margin-top:0.75rem;">
+                Krishanjeet &amp; Aanchal
+            </p>
+           
+        </div>
+    </section>
+
+</div>
+
+<div id="rsvp-modal">
+    <div class="modal-card">
+        <div class="modal-icon-ring" id="modal-icon">
+            <svg id="modal-success-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            <svg id="modal-error-svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none;color:#dc2626"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </div>
+        <h3 class="modal-title" id="modal-title">Thank You!</h3>
+        <p class="modal-msg" id="modal-msg">We can't wait to celebrate with you!</p>
+        <button class="modal-close-btn" id="modal-close">Close</button>
+    </div>
+</div>
+
+<script>
+/* ================================================================
+   MEMORIES GALLERY - gallery.json
+================================================================ */
+(async function initMemoriesGallery() {
+    const slider = document.getElementById('memories-slider');
+    if (!slider) return;
+    const frame = slider.closest('.memories-frame');
+    let galleryTimer = null;
+    let slides = Array.from(slider.querySelectorAll('.memory-slide'));
+    let activeIndex = 0;
+    let galleryInView = false;
+
+    function stopGallery() {
+        if (galleryTimer !== null) window.clearInterval(galleryTimer);
+        galleryTimer = null;
+    }
+
+    function resetGallery() {
+        activeIndex = 0;
+        slides.forEach((slide, index) => slide.classList.toggle('is-active', index === 0));
+    }
+
+    function startGallery() {
+        if (!galleryInView || document.hidden || galleryTimer !== null || slides.length < 2) return;
+        galleryTimer = window.setInterval(() => {
+            slides[activeIndex].classList.remove('is-active');
+            activeIndex = (activeIndex + 1) % slides.length;
+            slides[activeIndex].classList.add('is-active');
+        }, 3400);
+    }
+
+    function escapeAttr(value) {
+        return String(value).replace(/[&<>"']/g, char => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        })[char]);
+    }
+
+    function renderGallery(items) {
+        const galleryItems = items.filter(item => item && item.src);
+        if (!galleryItems.length) {
+            stopGallery();
+            slides = [];
+            slider.innerHTML = '<div class="memory-empty">Beautiful memories coming soon.</div>';
+            return;
+        }
+        slider.innerHTML = galleryItems.map((item, index) => {
+            const src = escapeAttr(item.src);
+            const alt = escapeAttr(item.alt || `Krishanjeet and Aanchal memory ${index + 1}`);
+            return `<figure class="memory-slide${index === 0 ? ' is-active' : ''}"><img src="${src}" alt="${alt}" loading="eager" decoding="async"></figure>`;
+        }).join('');
+
+        stopGallery();
+        slides = Array.from(slider.querySelectorAll('.memory-slide'));
+        resetGallery();
+        startGallery();
+    }
+
+    if (frame) {
+        const galleryObserver = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting === galleryInView) return;
+            galleryInView = entry.isIntersecting;
+            stopGallery();
+            resetGallery();
+            startGallery();
+        }, { threshold: 0.45 });
+        galleryObserver.observe(frame);
+    }
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopGallery();
+        else startGallery();
+    });
+
+    try {
+        const response = await fetch('gallery.json', { cache: 'no-store' });
+        if (!response.ok) return;
+        const items = await response.json();
+        if (Array.isArray(items)) renderGallery(items);
+    } catch (error) {
+        console.warn('Unable to load gallery.json', error);
+    }
+})();
+
+/* ================================================================
+   LANTERNS — Canvas animation
+================================================================ */
+(function initLanterns() {
+    const canvas = document.getElementById('lanterns-canvas');
+    const ctx = canvas.getContext('2d');
+    let raf;
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+
+    const lanternImages = ['assets/lantern-one.png', 'assets/lantern-two.png'].map(src => {
+        const img = new Image();
+        img.src = src;
+        return img;
+    });
+    const COUNT  = window.innerWidth < 600 ? 9 : 16;
+    const lanterns = [];
+    class Lantern {
+        constructor() { this.reset(true); }
+        reset(initial) {
+            this.img = lanternImages[Math.floor(Math.random() * lanternImages.length)];
+            this.x = Math.random() * canvas.width;
+            this.y = initial ? Math.random() * canvas.height : canvas.height + 80;
+            this.size = (window.innerWidth < 600 ? 44 : 58) + Math.random() * (window.innerWidth < 600 ? 30 : 54);
+            this.vx = (Math.random() - 0.5) * 0.28;
+            this.vy = 0.28 + Math.random() * 0.5;
+            this.sway = Math.random() * Math.PI * 2;
+            this.swaySpeed = 0.006 + Math.random() * 0.009;
+            this.alpha = 0.42 + Math.random() * 0.42;
+            this.glow = 18 + Math.random() * 26;
+        }
+        update() {
+            this.sway += this.swaySpeed;
+            this.x += this.vx + Math.sin(this.sway) * 0.18;
+            this.y -= this.vy;
+            if (this.y < -this.size * 1.6) this.reset(false);
+        }
+        draw() {
+            if (!this.img.complete) return;
+            const ratio = this.img.naturalHeight / this.img.naturalWidth || 1.45;
+            const width = this.size;
+            const height = this.size * ratio;
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.globalAlpha = this.alpha;
+            ctx.shadowBlur = this.glow;
+            ctx.shadowColor = 'rgba(255,170,42,0.72)';
+            ctx.drawImage(this.img, -width / 2, -height / 2, width, height);
+            ctx.restore();
+        }
+    }
+    for (let i = 0; i < COUNT; i++) lanterns.push(new Lantern());
+    function loop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        lanterns.forEach(lantern => { lantern.update(); lantern.draw(); });
+        raf = requestAnimationFrame(loop);
+    }
+    document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(raf); else loop(); });
+    loop();
+})();
+
+/* ================================================================
+   ROSE PETALS — Light mode canvas animation
+================================================================ */
+(function initPetals() {
+    const canvas = document.getElementById('petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let raf;
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+
+    const COLORS = ['#D4806A','#E8C07A','#C9963E','#B85940','#EEDDD3','#F5E4C0'];
+    const COUNT  = window.innerWidth < 600 ? 22 : 40;
+    const petals = [];
+    class Petal {
+        constructor() { this.reset(true); }
+        reset(initial) {
+            this.x   = Math.random() * canvas.width;
+            this.y   = initial ? Math.random() * canvas.height * 2 - canvas.height : -20;
+            this.r   = 4 + Math.random() * 5;
+            this.vx  = (Math.random() - 0.5) * 0.8;
+            this.vy  = 0.6 + Math.random() * 1.2;
+            this.rot = Math.random() * Math.PI * 2;
+            this.drot= (Math.random()-0.5)*0.04;
+            this.color= COLORS[Math.floor(Math.random()*COLORS.length)];
+            this.alpha= 0.5 + Math.random()*0.4;
+        }
+        update() {
+            this.x += this.vx + Math.sin(this.y*0.01)*0.4;
+            this.y += this.vy;
+            this.rot += this.drot;
+            if (this.y > canvas.height + 20) this.reset(false);
+        }
+        draw() {
+            ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.rot);
+            ctx.globalAlpha = this.alpha; ctx.fillStyle = this.color;
+            ctx.beginPath(); ctx.ellipse(0, 0, this.r*0.55, this.r, 0, 0, Math.PI*2);
+            ctx.fill(); ctx.restore();
+        }
+    }
+    for (let i = 0; i < COUNT; i++) petals.push(new Petal());
+    function loop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        petals.forEach(p => { p.update(); p.draw(); });
+        raf = requestAnimationFrame(loop);
+    }
+    document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(raf); else loop(); });
+    loop();
+})();
+
+/* ================================================================
+   COUNTDOWN TIMER LOGIC
+================================================================ */
+let countdownInterval;
+function startCountdown() {
+    const weddingDate = new Date("2026-11-30T13:00:00+05:30").getTime();
+    const daysEl = document.getElementById('cd-days');
+    const hoursEl = document.getElementById('cd-hours');
+    const minsEl = document.getElementById('cd-mins');
+    const secsEl = document.getElementById('cd-secs');
+    const container = document.getElementById('countdown-container');
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            daysEl.innerText = "00"; hoursEl.innerText = "00";
+            minsEl.innerText = "00"; secsEl.innerText = "00";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        daysEl.innerText = days < 10 ? "0" + days : days;
+        hoursEl.innerText = hours < 10 ? "0" + hours : hours;
+        minsEl.innerText = minutes < 10 ? "0" + minutes : minutes;
+        secsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
+    }
+    
+    updateTimer();
+    countdownInterval = setInterval(updateTimer, 1000);
+    container.classList.add('revealed');
+}
+
+/* ================================================================
+   3 HEARTS SCRATCH TO REVEAL LOGIC
+================================================================ */
+class ScratchHeart {
+    constructor(canvasId, containerId, onReveal) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d', { willReadFrequently: true });
+        this.container = document.getElementById(containerId);
+        this.onReveal = onReveal;
+        this.isDrawing = false;
+        this.revealed = false;
+        this.init();
+    }
+    init() {
+        const rect = this.container.getBoundingClientRect();
+        this.width = rect.width;
+        this.height = rect.height;
+        const dpr = window.devicePixelRatio || 1;
+        this.canvas.width = this.width * dpr;
+        this.canvas.height = this.height * dpr;
+        this.ctx.scale(dpr, dpr);
+
+        this.ctx.fillStyle = '#B85940';
+        this.ctx.fillRect(0, 0, this.width, this.height);
+        
+        this.ctx.fillStyle = 'rgba(255,255,255,0.7)';
+        this.ctx.font = "bold 11px 'Cormorant Garamond', serif";
+        this.ctx.textAlign = "center";
+        this.ctx.letterSpacing = "2px";
+        this.ctx.fillText("SCRATCH", this.width / 2, this.height / 2 + 4);
+
+        this.canvas.addEventListener('mousedown', (e) => { this.isDrawing = true; this.scratch(e); });
+        this.canvas.addEventListener('touchstart', (e) => { this.isDrawing = true; this.scratch(e); }, { passive: false });
+        window.addEventListener('mouseup', () => { this.isDrawing = false; });
+        window.addEventListener('touchend', () => { this.isDrawing = false; });
+        this.canvas.addEventListener('mousemove', (e) => this.scratch(e));
+        this.canvas.addEventListener('touchmove', (e) => this.scratch(e), { passive: false });
+    }
+    getMousePos(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return { x: clientX - rect.left, y: clientY - rect.top };
+    }
+    scratch(e) {
+        if (!this.isDrawing || this.revealed) return;
+        if (e.cancelable && e.type.startsWith('touch')) e.preventDefault();
+        const pos = this.getMousePos(e);
+        this.ctx.globalCompositeOperation = 'destination-out';
+        this.ctx.beginPath();
+        this.ctx.arc(pos.x, pos.y, this.width * 0.22, 0, Math.PI * 2);
+        this.ctx.fill();
+        if (Math.random() > 0.2) this.checkProgress();
+    }
+    checkProgress() {
+        if (this.revealed) return;
+        const sampleRate = 32; 
+        const imageData = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+        const pixels = imageData.data;
+        let transparentPixels = 0;
+        for (let i = 3; i < pixels.length; i += sampleRate) {
+            if (pixels[i] < 128) transparentPixels++;
+        }
+        const totalPixels = pixels.length / sampleRate;
+        if ((transparentPixels / totalPixels) * 100 > 45) {
+            this.revealAll();
+        }
+    }
+    revealAll() {
+        this.revealed = true;
+        this.canvas.style.opacity = '0';
+        setTimeout(() => {
+            this.canvas.style.display = 'none';
+            this.onReveal();
+        }, 1000);
+    }
+}
+
+function initScratchHearts() {
+    let revealedHeartsCount = 0;
+    const totalHearts = 3;
+
+    function checkAllRevealed() {
+        revealedHeartsCount++;
+        if (revealedHeartsCount === totalHearts) {
+            const heartsRow = document.getElementById('heartsRow');
+            if (heartsRow) heartsRow.classList.add('unlocked');
+            
+            const surpriseMsg = document.getElementById('surpriseMessage');
+            if (surpriseMsg) {
+                setTimeout(() => { 
+                    surpriseMsg.classList.add('revealed');
+                    startCountdown();
+                }, 500);
+            }
+
+            setTimeout(() => {
+                const colors = ['#B85940', '#C9963E', '#E8C07A', '#FFFFFF'];
+                confetti({
+                    particleCount: 40,
+                    angle: 60,
+                    spread: 60,
+                    origin: { x: 0, y: 0.6 },
+                    colors: colors,
+                    zIndex: 9999
+                });
+                confetti({
+                    particleCount: 40,
+                    angle: 120,
+                    spread: 60,
+                    origin: { x: 1, y: 0.6 },
+                    colors: colors,
+                    zIndex: 9999
+                });
+            }, 800);
+        }
+    }
+
+    new ScratchHeart('scratchCanvas1', 'heartContainer1', checkAllRevealed);
+    new ScratchHeart('scratchCanvas2', 'heartContainer2', checkAllRevealed);
+    new ScratchHeart('scratchCanvas3', 'heartContainer3', checkAllRevealed);
+}
+
+/* ================================================================
+   ENTRY GATE & SMOOTH SCROLLING
+================================================================ */
+const gate        = document.getElementById('entry-gate');
+const entryVideo  = document.getElementById('entry-video');
+const playOverlay = document.getElementById('play-overlay');
+const bgAudio     = document.getElementById('bg-audio');
+const mainEl      = document.getElementById('main-content');
+const lanternCanvas = document.getElementById('lanterns-canvas');
+const petalCanvas = document.getElementById('petals-canvas');
+
+let audioPlaying = false;
+let mainRevealed = false;
+let autoScrollTimeout;
+let userInteracted = false;
+let scratchInitialized = false;
+
+function smoothScrollTo(endY, duration) {
+    const startY = window.scrollY; const distanceY = endY - startY;
+    let startTime = null; let animationFrameId;
+    function animation(currentTime) {
+        if (userInteracted) { cancelAnimationFrame(animationFrameId); return; }
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        let t = timeElapsed / (duration / 2); let run;
+        if (t < 1) run = distanceY / 2 * t * t * t + startY;
+        else { t -= 2; run = distanceY / 2 * (t * t * t + 2) + startY; }
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) animationFrameId = requestAnimationFrame(animation);
+    }
+    animationFrameId = requestAnimationFrame(animation);
+}
+
+function handleUserInteraction() {
+    userInteracted = true; clearTimeout(autoScrollTimeout);
+    window.removeEventListener('wheel', handleUserInteraction);
+    window.removeEventListener('touchstart', handleUserInteraction);
+    window.removeEventListener('mousedown', handleUserInteraction);
+    window.removeEventListener('keydown', handleUserInteraction);
+}
+
+entryVideo.addEventListener('error', () => { if (!mainRevealed) setTimeout(revealMain, 500); });
+function revealMain() {
+    if (mainRevealed) return;
+    mainRevealed = true;
+    gate.classList.add('fade-out');
+    setTimeout(() => { gate.style.display = 'none'; }, 900);
+    mainEl.classList.add('visible', 'fade-in');
+    lanternCanvas.classList.add('active');
+    petalCanvas.classList.add('active');
+    document.body.style.overflow = 'auto';
+    initReveal();
+    
+    if(!scratchInitialized) { initScratchHearts(); scratchInitialized = true; }
+    
+    setTimeout(() => {
+        window.addEventListener('wheel', handleUserInteraction, { passive: true });
+        window.addEventListener('touchstart', handleUserInteraction, { passive: true });
+        window.addEventListener('mousedown', handleUserInteraction, { passive: true });
+        window.addEventListener('keydown', handleUserInteraction, { passive: true });
+    }, 1000);
+
+    autoScrollTimeout = setTimeout(() => {
+        if (!userInteracted) {
+            const scratchSection = document.getElementById('scratch-reveal-section');
+            if (scratchSection) {
+                const targetY = scratchSection.getBoundingClientRect().top + window.scrollY + (scratchSection.offsetHeight / 2) - (window.innerHeight / 2);
+                smoothScrollTo(targetY, 2500);
+            }
+        }
+    }, 5000);
+}
+
+gate.addEventListener('click', async () => {
+    if (mainRevealed) return;
+    playOverlay.classList.add('hidden');
+    try {
+        entryVideo.muted = false; 
+        await entryVideo.play();
+        try { await bgAudio.play(); audioPlaying = true; updateAudioIcon(); } catch(_) {}
+    } catch(err) {
+        entryVideo.muted = true;
+        try { await entryVideo.play(); try { await bgAudio.play(); audioPlaying = true; updateAudioIcon(); } catch(_) {} } catch(e2) { revealMain(); }
+    }
+});
+entryVideo.addEventListener('ended', revealMain);
+document.body.style.overflow = 'hidden';
+
+/* ================================================================
+   AUDIO TOGGLE
+================================================================ */
+const audioBtn = document.getElementById('audio-btn');
+const iconOn   = document.getElementById('icon-on');
+const iconOff  = document.getElementById('icon-off');
+const themeBtn = document.getElementById('theme-btn');
+const themeMoonIcon = document.getElementById('theme-icon-moon');
+const themeSunIcon = document.getElementById('theme-icon-sun');
+
+function applyTheme(mode) {
+    const lightMode = mode === 'light';
+    document.body.classList.toggle('light-theme', lightMode);
+    themeBtn.setAttribute('aria-pressed', lightMode ? 'true' : 'false');
+    themeBtn.title = lightMode ? 'Switch to dark theme' : 'Switch to light theme';
+    themeBtn.setAttribute('aria-label', themeBtn.title);
+    themeMoonIcon.style.display = lightMode ? 'none' : '';
+    themeSunIcon.style.display = lightMode ? '' : 'none';
+}
+
+applyTheme('light');
+
+themeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const nextTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+    applyTheme(nextTheme);
+});
+
+function updateAudioIcon() {
+    iconOn.style.display  = audioPlaying ? '' : 'none';
+    iconOff.style.display = audioPlaying ? 'none' : '';
+}
+
+audioBtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (audioPlaying) { bgAudio.pause(); audioPlaying = false; } else { try { await bgAudio.play(); audioPlaying = true; } catch(err) {} }
+    updateAudioIcon();
+});
+
+/* ================================================================
+   SCROLL REVEAL 
+================================================================ */
+function initReveal() {
+    const els = document.querySelectorAll('.reveal');
+    const io  = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => io.observe(el));
+}
+
+/* ================================================================
+   RSVP FORM & MODAL
+================================================================ */
+const rsvpForm  = document.getElementById('rsvp-form');
+const submitBtn = document.getElementById('submit-btn');
+const btnText   = document.getElementById('btn-text');
+const btnSpinner= document.getElementById('btn-spinner');
+
+rsvpForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true; 
+    btnText.textContent = 'Sending...'; 
+    btnSpinner.style.display = 'inline';
+    
+    const formData = new FormData(e.target); 
+    const fields = {};
+    
+    for (let key of formData.keys()) {
+        const values = formData.getAll(key);
+        fields[key] = values.length > 1 ? values.join(', ') : values[0];
+    }
+
+    try {
+        // Responses go to the Google Sheet via the Apps Script web app (see rsvp-google-sheet.gs).
+        // Paste the deployed web app URL (ends in /exec) below.
+        const RSVP_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxky225mlCuDXlXM747JLUzVs0CeRb-ApmU_aLkmC7vbEHdV2HQCnOSbm-XZ3c59l_y/exec';
+        const res = await fetch(RSVP_SHEET_URL, {
+            method: 'POST',
+            // text/plain avoids a CORS preflight, which Apps Script doesn't support
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+                guestName: fields.guestName || '',
+                mobileNumber: fields.mobileNumber || '',
+                attendingReception: fields.attendingReception || '',
+                guessEmotionalFirst: fields.guessEmotionalFirst || '',
+                message: fields.message || ''
+            })
+        });
+        const result = await res.json();
+
+        showModal(result.ok ? 'success' : 'error');
+
+        if (result.ok) {
+            e.target.reset();
+        }
+    } catch(err) {
+        showModal('error'); 
+    } finally { 
+        submitBtn.disabled = false; 
+        btnText.textContent = 'Send Love'; 
+        btnSpinner.style.display = 'none'; 
+    }
+});
+
+const modal       = document.getElementById('rsvp-modal');
+const modalTitle  = document.getElementById('modal-title');
+const modalMsg    = document.getElementById('modal-msg');
+const modalSucc   = document.getElementById('modal-success-svg');
+const modalErr    = document.getElementById('modal-error-svg');
+const modalIcon   = document.getElementById('modal-icon');
+const modalClose  = document.getElementById('modal-close');
+
+function showModal(type) {
+    if (type === 'success') {
+        modalTitle.textContent = 'Thank You!'; modalMsg.textContent = "We can't wait to celebrate with you!";
+        modalSucc.style.display = ''; modalErr.style.display = 'none'; modalIcon.style.background = 'rgba(184,89,64,0.1)';
+    } else {
+        modalTitle.textContent = 'Oops!'; modalMsg.textContent = 'There was an error submitting your RSVP. Please try again.';
+        modalSucc.style.display = 'none'; modalErr.style.display = ''; modalIcon.style.background = 'rgba(220,38,38,0.08)';
+    }
+    modal.classList.add('open');
+}
+
+function closeModal() { modal.classList.remove('open'); }
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+window.addEventListener('resize', () => {
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(() => { }, 250);
+});
+</script>
+</body>
+</html>
+
